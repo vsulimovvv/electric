@@ -36,7 +36,7 @@
   </head>
 
   <body>
-    <div class="popup popup--online-booking">
+    <div class="popup popup--order">
   <div class="popup__container">
     <button class="popup__close" type="button" aria-label="Закрыть">
       <svg width="15" height="15">
@@ -44,42 +44,41 @@
       </svg>
     </button>
     <div class="popup__wrapper">
-      <h2 class="popup__title">Онлайн запись</h2>
+      <h2 class="popup__title">Заказать проект</h2>
       <div class="popup__text">
         <p>Оставьте ваши данные и мы вам перезвоним.</p>
       </div>
 
       <form class="form-submit">
         <div class="form-submit__group">
-          <label class="form-submit__label" for="online-name">Имя</label>
-
+          <label class="form-submit__label" for="email">Ваш e-mail</label>
           <input
             class="form-submit__input"
-            name="name"
-            id="online-name"
-            type="text"
-            placeholder="Введите ваше имя"
-            required
+            type="email"
+            id="email"
+            placeholder="Введите адрес вашей электронной почты"
           />
         </div>
         <div class="form-submit__group">
-          <label class="form-submit__label" for="online-tel">
-            Контактный телефон
-          </label>
-
+          <label class="form-submit__label" for="tel">Телефон</label>
           <input
             class="form-submit__input"
-            name="tel"
-            id="online-tel"
+            id="tel"
             type="tel"
-            placeholder="+7 (___) ___-__-__"
-            required
+            placeholder="+7 ( _ _ _ ) _ _ _ - _ _ - _ _"
           />
         </div>
+        <div class="form-submit__group">
+          <label class="checkbox">
+            <input class="checkbox__input" type="checkbox" required />
+            <span class="checkbox__box"></span>
+            <span class="checkbox__text">
+              Соглашаюсь с<a href="#"> обработкой персональных данных</a>
+            </span>
+          </label>
+        </div>
 
-        <button class="form-submit__btn btn" type="button">
-          Заказать звонок
-        </button>
+        <button class="form-submit__btn btn" type="button">Отравить</button>
       </form>
     </div>
   </div>
@@ -148,7 +147,6 @@
       <a class="mobile-menu__phone" href="tel:+77750940108">
         +7 (775) 094 01 08
       </a>
-      <!-- <button class="mobile-menu__btn btn" type="button">Онлайн запись</button> -->
     </div>
   </div>
   <!-- Mobile Menu -->
@@ -156,7 +154,7 @@
   <div class="container">
     <div class="header__wrapper">
       <div class="header__left">
-        <a class="header__logo logo" href="#">
+        <a class="header__logo logo" href="index.html">
           <picture>
             <source srcset="img/logo-small.svg" media="(max-width: 359px)" />
             <img src="img/logo.svg" alt="логотип" />
@@ -245,69 +243,6 @@
       </div>
     </div>
   </div>
-
-  <!-- <div class="container"> -->
-  <!-- <div class="header__wrapper">
-    <div class="header__navbar">
-      <div class="container">
-        <div class="header__navbar-inner">
-          <nav class="header__menu menu">
-            <ul class="menu__list">
-              <li class="menu__item">
-                <a class="menu__link" href="#">Статьи</a>
-              </li>
-              <li class="menu__item">
-                <a class="menu__link" href="#">Шпаргалки</a>
-              </li>
-              <li class="menu__item">
-                <a class="menu__link" href="#">Портфолио</a>
-              </li>
-              <li class="menu__item">
-                <a class="menu__link" href="#">Услуги</a>
-              </li>
-              <li class="menu__item">
-                <a class="menu__link" href="#">Об авторе</a>
-              </li>
-            </ul>
-          </nav>
-          <form class="header__search form-search">
-            <label class="form-search__group">
-              <input
-                class="form-search__input"
-                type="text"
-                placeholder="Поиск по блогу"
-              />
-            </label>
-            <button class="form-search__btn" type="submit">
-              <svg
-                width="23"
-                height="23"
-                viewBox="0 0 23 23"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M10.1416 17.6875C14.1284 17.6875 17.3604 14.4556 17.3604 10.4688C17.3604 6.48194 14.1284 3.25 10.1416 3.25C6.1548 3.25 2.92285 6.48194 2.92285 10.4688C2.92285 14.4556 6.1548 17.6875 10.1416 17.6875Z"
-                  stroke="black"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-                <path
-                  d="M15.2461 15.5735L19.4227 19.75"
-                  stroke="black"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-              </svg>
-            </button>
-          </form>
-        </div>
-      </div>
-    </div>
-  </div> -->
-  <!-- </div> -->
 </header>
 
 
@@ -316,6 +251,19 @@
           <div class="container">
             <div class="main-grid__content">
               <div class="main-grid__left">
+                <div class="breadcrumbs">
+                  <ul class="breadcrumbs__list">
+                    <li class="breadcrumbs__item">
+                      <a class="breadcrumbs__link" href="index.html">Главная</a>
+                    </li>
+                    <li class="breadcrumbs__item">
+                      <a class="breadcrumbs__link breadcrumbs__link--active">
+                        Портфолио
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+
                 <section class="project">
   <h1 class="project__title">Новая москва</h1>
 
@@ -492,14 +440,14 @@
   <ul class="some-projects__list">
     <li class="some-projects__item">
       <div class="portfolio-card">
-        <div class="portfolio-card__top">
+        <a class="portfolio-card__top" href="#">
           <picture>
             <source srcset="img/portfolio/4.webp" type="image/webp" />
             <img src="img/portfolio/4.png" alt="portfolio-page" />
           </picture>
-        </div>
+        </a>
         <div class="portfolio-card__body">
-          <h3 class="portfolio-card__title">“kutuzov hills”</h3>
+          <h3 class="portfolio-card__title"><a href="#">“kutuzov hills”</a></h3>
           <p class="portfolio-card__text">
             Краткий текст, относительно данного проекта
           </p>
@@ -510,14 +458,14 @@
     </li>
     <li class="some-projects__item">
       <div class="portfolio-card">
-        <div class="portfolio-card__top">
+        <a class="portfolio-card__top" href="#">
           <picture>
             <source srcset="img/portfolio/5.webp" type="image/webp" />
             <img src="img/portfolio/5.png" alt="portfolio-page" />
           </picture>
-        </div>
+        </a>
         <div class="portfolio-card__body">
-          <h3 class="portfolio-card__title">“Князевкое”</h3>
+          <h3 class="portfolio-card__title"><a href="#">“Князевкое”</a></h3>
           <p class="portfolio-card__text">
             Краткий текст, относительно данного проекта
           </p>
@@ -528,14 +476,14 @@
     </li>
     <li class="some-projects__item">
       <div class="portfolio-card">
-        <div class="portfolio-card__top">
+        <a class="portfolio-card__top" href="#">
           <picture>
             <source srcset="img/portfolio/6.webp" type="image/webp" />
             <img src="img/portfolio/6.png" alt="portfolio-page" />
           </picture>
-        </div>
+        </a>
         <div class="portfolio-card__body">
-          <h3 class="portfolio-card__title">“Династия”</h3>
+          <h3 class="portfolio-card__title"><a href="#">“Династия”</a></h3>
           <p class="portfolio-card__text">
             Краткий текст, относительно данного проекта
           </p>
@@ -588,7 +536,7 @@
                 <div class="side">
   <div class="side__inner">
     <div class="side-menu">
-      <div class="side-menu__top side-head">Разделы</div>
+      <div class="side-menu__head side-head">Разделы</div>
       <ul class="side-menu__list">
         <li class="side-menu__item">
           <a class="side-menu__link" href="#">
@@ -625,14 +573,17 @@
         </li>
       </ul>
     </div>
+
     <div class="side-author">
-      <div class="side-author__top side-head">Об авторе</div>
+      <div class="side-author__head side-head">Об авторе</div>
       <div class="side-author__inner">
-        <picture>
-          <source srcset="img/author.webp" type="image/webp" />
-          <img class="side-author__img" src="img/author.jpg" alt="author" />
-        </picture>
-        <span class="side-author__name">Бердыгалиев Кайрат</span>
+        <a class="side-author__top" href="about.html">
+          <picture>
+            <source srcset="img/author.webp" type="image/webp" />
+            <img class="side-author__img" src="img/author.jpg" alt="author" />
+          </picture>
+          <span class="side-author__name">Бердыгалиев Кайрат</span>
+        </a>
         <div class="side-author__descr">
           <span class="side-author__prof">Инженер-электрик </span>
           <span>
@@ -649,25 +600,26 @@
           </a>
           <span>ежедневно с 9 до 21 часа</span>
         </div>
-        <button class="side-author__btn btn" type="button">
+        <button class="side-author__btn btn order-project" type="button">
           Заказать проект
         </button>
       </div>
     </div>
+
     <div class="side-banner">Рекламный баннер</div>
 
     <div class="side-popular">
-      <div class="side-author__top side-head">Популярное</div>
+      <div class="side-author__head side-head">Популярное</div>
 
       <ul class="side-popular__list">
         <li class="side-popular__item">
           <article class="popular-card">
-            <div class="popular-card__left">
+            <a class="popular-card__left" href="#">
               <picture>
                 <source srcset="img/hero/1.webp" type="image/webp" />
                 <img src="img/hero/1.jpg" alt="news" />
               </picture>
-            </div>
+            </a>
             <div class="popular-card__right">
               <h3 class="popular-card__title">
                 <a href="#">
@@ -680,12 +632,12 @@
         </li>
         <li class="side-popular__item">
           <article class="popular-card">
-            <div class="popular-card__left">
+            <a class="popular-card__left" href="#">
               <picture>
                 <source srcset="img/hero/1.webp" type="image/webp" />
                 <img src="img/hero/1.jpg" alt="news" />
               </picture>
-            </div>
+            </a>
             <div class="popular-card__right">
               <h3 class="popular-card__title">
                 <a href="#">
@@ -698,12 +650,12 @@
         </li>
         <li class="side-popular__item">
           <article class="popular-card">
-            <div class="popular-card__left">
+            <a class="popular-card__left" href="#">
               <picture>
                 <source srcset="img/hero/1.webp" type="image/webp" />
                 <img src="img/hero/1.jpg" alt="news" />
               </picture>
-            </div>
+            </a>
             <div class="popular-card__right">
               <h3 class="popular-card__title">
                 <a href="#">
@@ -716,12 +668,12 @@
         </li>
         <li class="side-popular__item">
           <article class="popular-card">
-            <div class="popular-card__left">
+            <a class="popular-card__left" href="#">
               <picture>
                 <source srcset="img/hero/1.webp" type="image/webp" />
                 <img src="img/hero/1.jpg" alt="news" />
               </picture>
-            </div>
+            </a>
             <div class="popular-card__right">
               <h3 class="popular-card__title">
                 <a href="#">
@@ -734,12 +686,12 @@
         </li>
         <li class="side-popular__item">
           <article class="popular-card">
-            <div class="popular-card__left">
+            <a class="popular-card__left" href="#">
               <picture>
                 <source srcset="img/hero/1.webp" type="image/webp" />
                 <img src="img/hero/1.jpg" alt="news" />
               </picture>
-            </div>
+            </a>
             <div class="popular-card__right">
               <h3 class="popular-card__title">
                 <a href="#">
@@ -752,12 +704,12 @@
         </li>
         <li class="side-popular__item">
           <article class="popular-card">
-            <div class="popular-card__left">
+            <a class="popular-card__left" href="#">
               <picture>
                 <source srcset="img/hero/1.webp" type="image/webp" />
                 <img src="img/hero/1.jpg" alt="news" />
               </picture>
-            </div>
+            </a>
             <div class="popular-card__right">
               <h3 class="popular-card__title">
                 <a href="#">

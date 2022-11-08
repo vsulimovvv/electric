@@ -27,8 +27,8 @@ $('input[type="tel"]').mask('+7 (999) 999-99-99');
   new Swiper(sliderEl, {
     slidesPerView: 'auto',
     navigation: {
-      nextEl: '.hero__slider .swiper-button-next',
-      prevEl: '.hero__slider .swiper-button-prev',
+      nextEl: '.hero__wrapper .swiper-button-next',
+      prevEl: '.hero__wrapper .swiper-button-prev',
     },
     pagination: {
       el: '.swiper-pagination',
@@ -88,39 +88,39 @@ $('input[type="tel"]').mask('+7 (999) 999-99-99');
   });
 })();
 
-//   // * ===== Modal
-//   (function modals() {
-//     function bindModal(openBtn, modal, close) {
-//       const openBtnEl = document.querySelectorAll(openBtn);
-//       const modalEl = document.querySelector(modal);
-//       const closeEl = document.querySelectorAll(close);
-//       const body = document.querySelector('body');
-//       if (modalEl) {
-//         openBtnEl.forEach((el) => {
-//           el.addEventListener('click', (e) => {
-//             if (e.target) {
-//               e.preventDefault();
-//             }
-//             modalEl.classList.add('active');
-//             body.classList.add('no-scroll');
-//           });
-//         });
-//         closeEl.forEach((btn) => {
-//           btn.addEventListener('click', (e) => {
-//             modalEl.classList.remove('active');
-//             body.classList.remove('no-scroll');
-//           });
-//         });
-//         modalEl.addEventListener('click', (e) => {
-//           if (e.target === modalEl) {
-//             modalEl.classList.remove('active');
-//             body.classList.remove('no-scroll');
-//           }
-//         });
-//       }
-//     }
-//     bindModal('.online-booking-btn', '.popup--online-booking', '.popup__close');
-//   })();
+  // * ===== Modal
+  (function modals() {
+    function bindModal(openBtn, modal, close) {
+      const openBtnEl = document.querySelectorAll(openBtn);
+      const modalEl = document.querySelector(modal);
+      const closeEl = document.querySelectorAll(close);
+      const body = document.querySelector('body');
+      if (modalEl) {
+        openBtnEl.forEach((el) => {
+          el.addEventListener('click', (e) => {
+            if (e.target) {
+              e.preventDefault();
+            }
+            modalEl.classList.add('active');
+            body.classList.add('no-scroll');
+          });
+        });
+        closeEl.forEach((btn) => {
+          btn.addEventListener('click', (e) => {
+            modalEl.classList.remove('active');
+            body.classList.remove('no-scroll');
+          });
+        });
+        modalEl.addEventListener('click', (e) => {
+          if (e.target === modalEl) {
+            modalEl.classList.remove('active');
+            body.classList.remove('no-scroll');
+          }
+        });
+      }
+    }
+    bindModal('.order-project', '.popup--order', '.popup__close');
+  })();
 
 //   // * ===== Toggle Tabs
 //   function someTabs(headerSelector, tabSelector, contentSelector, activeClass) {
