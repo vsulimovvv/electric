@@ -1,0 +1,743 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Favicon -->
+<link rel="shortcut icon" href="img/favicon.svg" type="image/x-icon" />
+
+<!-- Link Swiper's CSS -->
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+<!-- nouislider -->
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.5.0/nouislider.min.css"
+/>
+
+<!-- Choices JS  -->
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/choices.js/public/assets/styles/choices.min.css"
+/>
+
+<!-- fancybox -->
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css"
+/>
+
+<!-- Custom Link -->
+<link rel="stylesheet" href="css/style.css" />
+
+<title>Блог инженера - электрика</title>
+
+  </head>
+
+  <body>
+    <div class="popup popup--online-booking">
+  <div class="popup__container">
+    <button class="popup__close" type="button" aria-label="Закрыть">
+      <svg width="15" height="15">
+        <use xlink:href="img/sprite.svg#close"></use>
+      </svg>
+    </button>
+    <div class="popup__wrapper">
+      <h2 class="popup__title">Онлайн запись</h2>
+      <div class="popup__text">
+        <p>Оставьте ваши данные и мы вам перезвоним.</p>
+      </div>
+
+      <form class="form-submit">
+        <div class="form-submit__group">
+          <label class="form-submit__label" for="online-name">Имя</label>
+
+          <input
+            class="form-submit__input"
+            name="name"
+            id="online-name"
+            type="text"
+            placeholder="Введите ваше имя"
+            required
+          />
+        </div>
+        <div class="form-submit__group">
+          <label class="form-submit__label" for="online-tel">
+            Контактный телефон
+          </label>
+
+          <input
+            class="form-submit__input"
+            name="tel"
+            id="online-tel"
+            type="tel"
+            placeholder="+7 (___) ___-__-__"
+            required
+          />
+        </div>
+
+        <button class="form-submit__btn btn" type="button">
+          Заказать звонок
+        </button>
+      </form>
+    </div>
+  </div>
+</div>
+
+
+    <div class="site-wrapper">
+      <header class="header">
+  <!-- Mobile Menu -->
+  <div class="overlay"></div>
+
+  <div class="mobile-menu">
+    <div class="mobile-menu__top">
+      <a class="mobile-menu__logo logo" href="#">
+        <img src="img/logo.svg" alt="логотип" />
+      </a>
+      <button
+        class="mobile-menu__close"
+        type="button"
+        aria-label="Закрыть меню"
+      >
+        <svg
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M6 6L18 18"
+            stroke="#f1ebda"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+          <path
+            d="M18 6L6 18"
+            stroke="#f1ebda"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg>
+      </button>
+    </div>
+
+    <ul class="mobile-menu__list">
+      <li class="mobile-menu__item">
+        <a class="mobile-menu__link" href="#"><span>Статьи</span></a>
+      </li>
+      <li class="mobile-menu__item">
+        <a class="mobile-menu__link" href="#"><span>Шпаргалки</span></a>
+      </li>
+      <li class="mobile-menu__item">
+        <a class="mobile-menu__link" href="#"><span>Портфолио</span></a>
+      </li>
+      <li class="mobile-menu__item">
+        <a class="mobile-menu__link" href="#"><span>Услуги</span></a>
+      </li>
+      <li class="mobile-menu__item">
+        <a class="mobile-menu__link" href="#"><span>Об авторе</span></a>
+      </li>
+    </ul>
+
+    <div class="mobile-menu__btns">
+      <a class="mobile-menu__phone" href="tel:+77750940108">
+        +7 (775) 094 01 08
+      </a>
+      <!-- <button class="mobile-menu__btn btn" type="button">Онлайн запись</button> -->
+    </div>
+  </div>
+  <!-- Mobile Menu -->
+
+  <div class="container">
+    <div class="header__wrapper">
+      <div class="header__left">
+        <a class="header__logo logo" href="#">
+          <picture>
+            <source srcset="img/logo-small.svg" media="(max-width: 359px)" />
+            <img src="img/logo.svg" alt="логотип" />
+          </picture>
+        </a>
+        <p class="header__text">
+          Научу проектировать разделы <br />
+          ЭОМ, СС, ПС, ЭС, ЭН, либо спроектирую <br />
+          их в короткие сроки
+        </p>
+      </div>
+      <div class="header__right">
+        <span class="header__name">Контакты для связи</span>
+        <a class="header__phone" href="tel:+77750940108">
+          +7 (775) 094 01 08
+        </a>
+        <a class="header__mail" href="mailto:berdygaliyev@mail.ru">
+          berdygaliyev@mail.ru
+        </a>
+        <span class="header__schedule">ежедневно с 9 до 21 часа</span>
+      </div>
+    </div>
+    <div class="header__navbar">
+      <div class="container">
+        <div class="header__navbar-inner">
+          <button
+            class="header__toggle"
+            type="button"
+            aria-label="Открыть меню"
+          >
+            <span class="header__toggle-line"></span>
+          </button>
+          <nav class="header__menu menu">
+            <ul class="menu__list">
+              <li class="menu__item">
+                <a class="menu__link" href="#">Статьи</a>
+              </li>
+              <li class="menu__item">
+                <a class="menu__link" href="#">Шпаргалки</a>
+              </li>
+              <li class="menu__item">
+                <a class="menu__link" href="#">Портфолио</a>
+              </li>
+              <li class="menu__item">
+                <a class="menu__link" href="#">Услуги</a>
+              </li>
+              <li class="menu__item">
+                <a class="menu__link" href="#">Об авторе</a>
+              </li>
+            </ul>
+          </nav>
+          <form class="header__search form-search">
+            <label class="form-search__group">
+              <input
+                class="form-search__input"
+                type="text"
+                placeholder="Поиск по блогу"
+              />
+            </label>
+            <button class="form-search__btn" type="submit">
+              <svg
+                width="23"
+                height="23"
+                viewBox="0 0 23 23"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M10.1416 17.6875C14.1284 17.6875 17.3604 14.4556 17.3604 10.4688C17.3604 6.48194 14.1284 3.25 10.1416 3.25C6.1548 3.25 2.92285 6.48194 2.92285 10.4688C2.92285 14.4556 6.1548 17.6875 10.1416 17.6875Z"
+                  stroke="black"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M15.2461 15.5735L19.4227 19.75"
+                  stroke="black"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- <div class="container"> -->
+  <!-- <div class="header__wrapper">
+    <div class="header__navbar">
+      <div class="container">
+        <div class="header__navbar-inner">
+          <nav class="header__menu menu">
+            <ul class="menu__list">
+              <li class="menu__item">
+                <a class="menu__link" href="#">Статьи</a>
+              </li>
+              <li class="menu__item">
+                <a class="menu__link" href="#">Шпаргалки</a>
+              </li>
+              <li class="menu__item">
+                <a class="menu__link" href="#">Портфолио</a>
+              </li>
+              <li class="menu__item">
+                <a class="menu__link" href="#">Услуги</a>
+              </li>
+              <li class="menu__item">
+                <a class="menu__link" href="#">Об авторе</a>
+              </li>
+            </ul>
+          </nav>
+          <form class="header__search form-search">
+            <label class="form-search__group">
+              <input
+                class="form-search__input"
+                type="text"
+                placeholder="Поиск по блогу"
+              />
+            </label>
+            <button class="form-search__btn" type="submit">
+              <svg
+                width="23"
+                height="23"
+                viewBox="0 0 23 23"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M10.1416 17.6875C14.1284 17.6875 17.3604 14.4556 17.3604 10.4688C17.3604 6.48194 14.1284 3.25 10.1416 3.25C6.1548 3.25 2.92285 6.48194 2.92285 10.4688C2.92285 14.4556 6.1548 17.6875 10.1416 17.6875Z"
+                  stroke="black"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M15.2461 15.5735L19.4227 19.75"
+                  stroke="black"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div> -->
+  <!-- </div> -->
+</header>
+
+
+      <main class="main">
+        <div class="main-grid">
+          <div class="container">
+            <div class="main-grid__content">
+              <div class="main-grid__left">
+                
+                <section class="cheat-sheets">
+  <h2 class="cheat-sheets__title">Шпаргалки</h2>
+
+  <ul class="cheat-sheets__list">
+    <li class="cheat-sheets__item">
+      <a class="cheat-sheets__link" href="#" download>
+        <img width="24" height="24" src="img/xls.svg" alt="xls-icon" />
+        <span>Наименование документа.xls</span>
+      </a>
+    </li>
+    <li class="cheat-sheets__item">
+      <a class="cheat-sheets__link" href="#" download>
+        <img width="24" height="24" src="img/doc.svg" alt="xls-icon" />
+        <span>Наименование документа.doc</span>
+      </a>
+    </li>
+    <li class="cheat-sheets__item">
+      <a class="cheat-sheets__link" href="#" download>
+        <img width="24" height="24" src="img/pdf.svg" alt="xls-icon" />
+        <span>Наименование документа.pdf</span>
+      </a>
+    </li>
+    <li class="cheat-sheets__item">
+      <a class="cheat-sheets__link" href="#" download>
+        <img width="24" height="24" src="img/xls.svg" alt="xls-icon" />
+        <span>Наименование документа.xls</span>
+      </a>
+    </li>
+    <li class="cheat-sheets__item">
+      <a class="cheat-sheets__link" href="#" download>
+        <img width="24" height="24" src="img/doc.svg" alt="xls-icon" />
+        <span>Наименование документа.doc</span>
+      </a>
+    </li>
+    <li class="cheat-sheets__item">
+      <a class="cheat-sheets__link" href="#" download>
+        <img width="24" height="24" src="img/pdf.svg" alt="xls-icon" />
+        <span>Наименование документа.pdf</span>
+      </a>
+    </li>
+  </ul>
+</section>
+
+                <section class="order">
+  <div class="order__inner">
+    <div class="order__top">
+      <h2 class="order__title">
+        Вы также можете заказать проект у автора блога
+      </h2>
+      <a class="order__btn btn" href="about.html">Об авторе</a>
+    </div>
+    <form class="form-submit">
+      <div class="form-submit__top">
+        <div class="form-submit__group">
+          <label class="form-submit__label" for="email">Ваш e-mail</label>
+          <input
+            class="form-submit__input"
+            type="email"
+            id="email"
+            placeholder="Введите адрес вашей электронной почты"
+          />
+        </div>
+        <div class="form-submit__group">
+          <label class="form-submit__label" for="tel">Телефон</label>
+          <input
+            class="form-submit__input"
+            id="tel"
+            type="tel"
+            placeholder="+7 ( _ _ _ ) _ _ _ - _ _ - _ _"
+          />
+        </div>
+      </div>
+
+      <button class="form-submit__btn btn" type="submit">
+        Заказать проект
+      </button>
+    </form>
+  </div>
+</section>
+
+                <section class="interesting">
+  <div class="interesting__wrapper">
+    <h2 class="interesting__title">Вам так же может быть интересно</h2>
+
+    <ul class="interesting__list">
+      <li class="interesting__item">
+        <article class="news-card">
+          <a class="news-card__left" href="#">
+            <picture>
+              <source srcset="img/hero/1.webp" type="image/webp" />
+              <img src="img/hero/1.jpg" alt="news" />
+            </picture>
+          </a>
+          <div class="news-card__right">
+            <span class="news-card__views">Просмотров: 800</span>
+            <h3 class="news-card__title">
+              <a href="#">
+                Как правильно составить однолинейную схему ВРУ для офисов в
+                жилых комплексах
+              </a>
+            </h3>
+
+            <a class="news-card__more" href="#"> Читать далее</a>
+          </div>
+        </article>
+      </li>
+      <li class="interesting__item">
+        <article class="news-card">
+          <a class="news-card__left" href="#">
+            <picture>
+              <source srcset="img/hero/1.webp" type="image/webp" />
+              <img src="img/hero/1.jpg" alt="news" />
+            </picture>
+          </a>
+          <div class="news-card__right">
+            <span class="news-card__views">Просмотров: 800</span>
+            <h3 class="news-card__title">
+              <a href="#">
+                Как правильно составить однолинейную схему ВРУ для офисов в
+                жилых комплексах
+              </a>
+            </h3>
+
+            <a class="news-card__more" href="#"> Читать далее</a>
+          </div>
+        </article>
+      </li>
+      <li class="interesting__item">
+        <article class="news-card">
+          <a class="news-card__left" href="#">
+            <picture>
+              <source srcset="img/hero/1.webp" type="image/webp" />
+              <img src="img/hero/1.jpg" alt="news" />
+            </picture>
+          </a>
+          <div class="news-card__right">
+            <span class="news-card__views">Просмотров: 800</span>
+            <h3 class="news-card__title">
+              <a href="#">
+                Как правильно составить однолинейную схему ВРУ для офисов в
+                жилых комплексах
+              </a>
+            </h3>
+
+            <a class="news-card__more" href="#"> Читать далее</a>
+          </div>
+        </article>
+      </li>
+    </ul>
+  </div>
+</section>
+
+              </div>
+              <div class="main-grid__right">
+                <div class="side">
+  <div class="side__inner">
+    <div class="side-menu">
+      <div class="side-menu__top side-head">Разделы</div>
+      <ul class="side-menu__list">
+        <li class="side-menu__item">
+          <a class="side-menu__link" href="#">
+            Силовое электрооборудование <span>(19)</span>
+          </a>
+        </li>
+        <li class="side-menu__item">
+          <a class="side-menu__link" href="#"
+            >Электроосвещение <span>(12)</span></a
+          >
+        </li>
+        <li class="side-menu__item">
+          <a class="side-menu__link" href="#">
+            Системы связи <span>(4)</span></a
+          >
+        </li>
+        <li class="side-menu__item">
+          <a class="side-menu__link" href="#"
+            >Пожарная сигнализация <span>(2)</span></a
+          >
+        </li>
+        <li class="side-menu__item">
+          <a class="side-menu__link" href="#">BIM-электрика <span>(5)</span></a>
+        </li>
+        <li class="side-menu__item">
+          <a class="side-menu__link" href="#"
+            >Наружное электроосвещение <span>(14)</span></a
+          >
+        </li>
+        <li class="side-menu__item">
+          <a class="side-menu__link" href="#"
+            >Наружные сети электроснабжения <span>(8)</span></a
+          >
+        </li>
+      </ul>
+    </div>
+    <div class="side-author">
+      <div class="side-author__top side-head">Об авторе</div>
+      <div class="side-author__inner">
+        <picture>
+          <source srcset="img/author.webp" type="image/webp" />
+          <img class="side-author__img" src="img/author.jpg" alt="author" />
+        </picture>
+        <span class="side-author__name">Бердыгалиев Кайрат</span>
+        <div class="side-author__descr">
+          <span class="side-author__prof">Инженер-электрик </span>
+          <span>
+            Успешно проектирую <br />
+            с 2015 года
+          </span>
+        </div>
+        <div class="side-author__contacts">
+          <a class="side-author__phone" href="tel:+77750940108">
+            +7 (775) 094 01 08
+          </a>
+          <a class="side-author__mail" href="mailto:berdygaliyev@mail.ru ">
+            berdygaliyev@mail.ru
+          </a>
+          <span>ежедневно с 9 до 21 часа</span>
+        </div>
+        <button class="side-author__btn btn" type="button">
+          Заказать проект
+        </button>
+      </div>
+    </div>
+    <div class="side-banner">Рекламный баннер</div>
+
+    <div class="side-popular">
+      <div class="side-author__top side-head">Популярное</div>
+
+      <ul class="side-popular__list">
+        <li class="side-popular__item">
+          <article class="popular-card">
+            <div class="popular-card__left">
+              <picture>
+                <source srcset="img/hero/1.webp" type="image/webp" />
+                <img src="img/hero/1.jpg" alt="news" />
+              </picture>
+            </div>
+            <div class="popular-card__right">
+              <h3 class="popular-card__title">
+                <a href="#">
+                  Здесь будет заголовок статьи ссылкой на страницу статьи
+                </a>
+              </h3>
+            </div>
+            <div class="popular-card__views">Просмотров: 800</div>
+          </article>
+        </li>
+        <li class="side-popular__item">
+          <article class="popular-card">
+            <div class="popular-card__left">
+              <picture>
+                <source srcset="img/hero/1.webp" type="image/webp" />
+                <img src="img/hero/1.jpg" alt="news" />
+              </picture>
+            </div>
+            <div class="popular-card__right">
+              <h3 class="popular-card__title">
+                <a href="#">
+                  Здесь будет заголовок статьи ссылкой на страницу статьи
+                </a>
+              </h3>
+            </div>
+            <div class="popular-card__views">Просмотров: 800</div>
+          </article>
+        </li>
+        <li class="side-popular__item">
+          <article class="popular-card">
+            <div class="popular-card__left">
+              <picture>
+                <source srcset="img/hero/1.webp" type="image/webp" />
+                <img src="img/hero/1.jpg" alt="news" />
+              </picture>
+            </div>
+            <div class="popular-card__right">
+              <h3 class="popular-card__title">
+                <a href="#">
+                  Здесь будет заголовок статьи ссылкой на страницу статьи
+                </a>
+              </h3>
+            </div>
+            <div class="popular-card__views">Просмотров: 800</div>
+          </article>
+        </li>
+        <li class="side-popular__item">
+          <article class="popular-card">
+            <div class="popular-card__left">
+              <picture>
+                <source srcset="img/hero/1.webp" type="image/webp" />
+                <img src="img/hero/1.jpg" alt="news" />
+              </picture>
+            </div>
+            <div class="popular-card__right">
+              <h3 class="popular-card__title">
+                <a href="#">
+                  Здесь будет заголовок статьи ссылкой на страницу статьи
+                </a>
+              </h3>
+            </div>
+            <div class="popular-card__views">Просмотров: 800</div>
+          </article>
+        </li>
+        <li class="side-popular__item">
+          <article class="popular-card">
+            <div class="popular-card__left">
+              <picture>
+                <source srcset="img/hero/1.webp" type="image/webp" />
+                <img src="img/hero/1.jpg" alt="news" />
+              </picture>
+            </div>
+            <div class="popular-card__right">
+              <h3 class="popular-card__title">
+                <a href="#">
+                  Здесь будет заголовок статьи ссылкой на страницу статьи
+                </a>
+              </h3>
+            </div>
+            <div class="popular-card__views">Просмотров: 800</div>
+          </article>
+        </li>
+        <li class="side-popular__item">
+          <article class="popular-card">
+            <div class="popular-card__left">
+              <picture>
+                <source srcset="img/hero/1.webp" type="image/webp" />
+                <img src="img/hero/1.jpg" alt="news" />
+              </picture>
+            </div>
+            <div class="popular-card__right">
+              <h3 class="popular-card__title">
+                <a href="#">
+                  Здесь будет заголовок статьи ссылкой на страницу статьи
+                </a>
+              </h3>
+            </div>
+            <div class="popular-card__views">Просмотров: 800</div>
+          </article>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+              </div>
+            </div>
+            <section class="contacts" id="contacts">
+  <div class="container"></div>
+</section>
+
+          </div>
+        </div>
+      </main>
+      <footer class="footer">
+  <div class="container">
+    <div class="footer__wrapper">
+      <div class="footer__top">
+        <a class="footer__logo logo" href="#">
+          <img src="img/logo.svg" alt="логотип" />
+        </a>
+        <ul class="footer__list">
+          <li class="footer__item">
+            <a class="footer__link" href="#">Статьи</a>
+          </li>
+          <li class="footer__item">
+            <a class="footer__link" href="#">Расчеты</a>
+          </li>
+          <li class="footer__item">
+            <a class="footer__link" href="#">Портфолио</a>
+          </li>
+          <li class="footer__item">
+            <a class="footer__link" href="#">Услуги</a>
+          </li>
+          <li class="footer__item">
+            <a class="footer__link" href="#">Об авторе</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="footer__bottom">
+        <div class="footer__text">
+          © 2019-2022 “Блог инженера-электрика” <br />
+          Копирование и перепечатка материалов запрещена.
+        </div>
+        <a class="footer__copy" href="#">Политика конфиденциальности</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+    </div>
+
+    <!-- Swiper JS -->
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+<!-- nouislider -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.5.0/nouislider.min.js"></script>
+
+<!-- jQuery -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+<!-- Choices JS -->
+<script src="https://cdn.jsdelivr.net/npm/choices.js/public/assets/scripts/choices.min.js"></script>
+
+<!-- Input Mask -->
+<script
+  src="https://cdn.jsdelivr.net/npm/jquery.maskedinput@1.4.1/src/jquery.maskedinput.min.js"
+  type="text/javascript"
+></script>
+
+<!-- fancybox -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+
+<!-- JS -->
+<script src="js/main.min.js"></script>
+
+  </body>
+</html>
+
+<!-- <label class="checkbox">
+  <input class="checkbox__input" type="checkbox" required />
+  <span class="checkbox__box"></span>
+  <span class="checkbox__text">
+    Соглашаюсь с<a href="#"> обработкой персональных данных</a>
+  </span> 
+</label> -->

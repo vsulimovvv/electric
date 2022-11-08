@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    @include('./components/base/_meta.html')
+    @include('./components/base/_links.html')
+  </head>
+
+  <body>
+    @include('./components/_popups.html')
+
+    <div class="site-wrapper">
+      @include('./components/_header.html')
+
+      <main class="main">
+        <div class="main-grid">
+          <div class="container">
+            <div class="main-grid__content">
+              <div class="main-grid__left">
+                @include('./components/_project.html')
+                @include('./components/_some-projects.html')
+                @include('./components/_order-2.html')
+              </div>
+              <div class="main-grid__right">
+                @include('./components/_side.html')
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+      @include('./components/_footer.html')
+    </div>
+
+    @include('./components/base/_scripts.html')
+  </body>
+</html>
+
+<!-- <label class="checkbox">
+  <input class="checkbox__input" type="checkbox" required />
+  <span class="checkbox__box"></span>
+  <span class="checkbox__text">
+    Соглашаюсь с<a href="#"> обработкой персональных данных</a>
+  </span> 
+</label> -->
