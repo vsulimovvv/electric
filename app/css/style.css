@@ -2172,7 +2172,7 @@ body.no-scroll {
     height: 12px;
   }
 }
-.pagination__link:hover {
+.pagination__link.active, .pagination__link:hover {
   background-color: var(--color-yellow);
 }
 
