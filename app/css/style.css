@@ -2903,7 +2903,7 @@ body.no-scroll {
   color: var(--color-accent);
 }
 .portfolio-tab__btn.active span {
-  background-color: var(--color-dark);
+  background-color: var(--color-accent);
 }
 .portfolio-tab__item {
   display: -webkit-box;
@@ -3418,6 +3418,12 @@ body.no-scroll {
   font-size: 17px;
   margin-bottom: 26px;
   display: block;
+}
+.project .create-item:hover {
+  color: inherit;
+}
+.project .create-item:hover .create-item__icon {
+  background-color: var(--color-dark);
 }
 .project .create-item__icon {
   width: 20px;
