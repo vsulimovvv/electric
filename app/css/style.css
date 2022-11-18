@@ -205,7 +205,7 @@ body {
   background-color: var(--color-white);
   position: relative;
   overflow-x: hidden;
-  background-image: url("../img/background.jpg");
+  background-image: url("../img/background.webp");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
